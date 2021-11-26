@@ -7,11 +7,11 @@
 // start();
 
 const personalMovieDB = {
-
+    
     count: 0,
     movies: {},
     actors: {},
-    geners: [],
+    genres: [],
     privat: false,
     start: function () {
         personalMovieDB.count = +prompt("qani kino", "");
@@ -31,7 +31,7 @@ const personalMovieDB = {
                 console.log("Err");
                 i--;
             }
-
+   
         }
     },
     PersLevel: () => {
@@ -45,38 +45,39 @@ const personalMovieDB = {
             console.log(" errooooor ");
         }
     },
-    
+
     showMyDB: (hidden) => {
         if (!hidden) {
             console.log(personalMovieDB);
         }
     },
-    toggleVisibleMyDB: function(){
-        if (personalMovieDB.privat){
+    toggleVisibleMyDB: function () {
+        if (personalMovieDB.privat) {
             personalMovieDB.privat = false;
 
         } else {
-            personalMovieDB.privat=true;
+            personalMovieDB.privat = true;
         }
     },
-    writeYourGeners: () => {
-        for (let i = 1; i <= 3; i++) {
-            // let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+    writeYourGeners: function() {
+        for (let i = 1; i < 2; i++) {
             
-            // if(genre === '' || genre == null) {
-            //     console.log('sxal tvyal kam tvyal chka');
-            //     i--;
-            // } else {
-            //     personalMovieDB.geners[i - 1] = genre;
-            // }
-            let genre = prompt(`mutqagreq stwraketov ${i}`);
-
+            let genres = prompt(`mutqagreq storaketov`);
+            
+            if (genres === '' || genres == null) {
+                console.log('sxal tvyal kam tvyal chka');
+                i--;
+            } else {
+                personalMovieDB.genres = genres.split(', ');
+                personalMovieDB.genres.sort();
+            }
         }
-        personalMovieDB.geners.forEach((item, i) => {
-            console.log(`Любимый жанр $(i+1) это $(название из массива)`);
-
+        
+            personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимый жанр ${i + 1} - это ${item}`);
+           
         });
-
+    
     }
 
 };
