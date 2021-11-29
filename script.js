@@ -68,7 +68,7 @@ const personalMovieDB = {
                 console.log('sxal tvyal kam tvyal chka');
                 i--;
             } else {
-                personalMovieDB.genres = genres.split(', ');
+                personalMovieDB.genres = genres.split(' ');
                 personalMovieDB.genres.sort();
             }
         }
@@ -77,7 +77,7 @@ const personalMovieDB = {
             console.log(`Любимый жанр ${i + 1} - это ${item}`);
            
         });
-    
+        //console.log(`Любимый жанр ${personalMovieDB.genres} - ${personalMovieDB.genres[0]}`);
     }
 
 };
