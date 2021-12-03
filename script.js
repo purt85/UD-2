@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 // let NumOfFilms;
 
@@ -91,6 +91,4 @@ const personalMovieDB = {
 //showMyDB(personalMovieDB.privat); naxkiun stex er kanchec
 
 
-//writeYourGeners();
-
-// esa
+writeYourGeners();
